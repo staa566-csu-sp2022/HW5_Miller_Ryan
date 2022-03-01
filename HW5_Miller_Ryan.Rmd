@@ -8,25 +8,22 @@ knit: (function(input_file, encoding) {
  encoding=encoding,
  output_file=file.path(dirname(input_file), out_dir, 'index.html'))})
 ---
-```{r, echo = FALSE, message = FALSE}
-## Load required libraries
-library( rsconnect )
-library( shiny )
-```
 
 ```{r}
 
 #########################################################################################
 ## Deployment - gitHub / Local
 #########################################################################################
+library( shiny )
 shiny::runGitHub('HW5_Miller_Ryan', 'staa566-csu-sp2022', ref = 'main')
 
 ```
 ```{r}
 
 #########################################################################################
-## Deployment - Shiny somewhere
+## Deployment - Shiny
 #########################################################################################
+library( rsconnect )
 rsconnect::deployApp( '/home/ryan/HW5_Miller_Ryan' )
 
 ```
