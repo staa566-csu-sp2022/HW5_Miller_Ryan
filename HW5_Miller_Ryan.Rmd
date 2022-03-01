@@ -14,6 +14,7 @@ library(   hdf5r   )
 library(  plotly   )
 library(  pracma   )
 library(    psd    )
+library( rsconnect )
 library(  signal   )
 library( tidyverse )
 
@@ -191,8 +192,15 @@ h.whitebp <- plot_ly( pd.whitebp, x = ~Time ) %>%
 ```{r}
 
 #########################################################################################
-## Deployment
+## Deployment - gitHub / Local
 #########################################################################################
 shiny::runGitHub('HW5_Miller_Ryan', 'staa566-csu-sp2022', ref = 'main')
 
+```
+```{r}
+
+#########################################################################################
+## Deployment - Shiny somewhere
+#########################################################################################
+rsconnect::deployApp( '/home/ryan/HW5_Miller_Ryan' )
 ```
