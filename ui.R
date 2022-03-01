@@ -9,10 +9,12 @@ dashboardPage(
 
     ## Sidebar
     dashboardSidebar(
-        menuItem( 'Main'           , tabName = 'main' ),
-        menuItem( 'Raw Signal'     , tabName = 'raw_sig' ),
-        menuItem( 'Whitened Signal', tabName = 'white_sig' ),
-        menuItem( 'Final Signal'   , tabName = 'final_sig' )
+        sidebarMenu(
+            menuItem( 'Main'           , tabName = 'main' ),
+            menuItem( 'Raw Signal'     , tabName = 'raw_sig' ),
+            menuItem( 'Whitened Signal', tabName = 'white_sig' ),
+            menuItem( 'Final Signal'   , tabName = 'final_sig' )
+        )
     ),
 
     ## Body
